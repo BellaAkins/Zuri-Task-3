@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
+  font-family: open sans;
 }
 
 body {
   margin: 0;
+  background: #eff9f0;
 }
 
 a {
@@ -20,20 +22,26 @@ li {
   list-style: none;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .navbar {
   background: #f9c80e;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  padding-right: 4em;
 }
 .navbar .logo {
   text-decoration: none;
   color: #00040b;
   font-size: 24px;
   font-weight: 400;
-  font-style: normal;
   line-height: 100%;
   margin-top: 15px;
+  margin-left: 2em;
 }
 .navbar ul {
   display: flex;
@@ -43,7 +51,6 @@ li {
   font-family: Open Sans;
   font-size: 20px;
   font-weight: 400;
-  font-style: normal;
   line-height: 100%;
   padding: 10px;
 }
@@ -60,18 +67,12 @@ li {
   border-radius: 3px;
   background: #fafdfa;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+  border: none;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   font-family: Open Sans;
   line-height: 24px;
   padding: 12px;
-}
-.search-section .search-bar input ::-moz-placeholder {
-  margin-left: 15em;
-}
-.search-section .search-bar input ::placeholder {
-  margin-left: 15em;
 }
 .search-section .search-bar img {
   width: 48px;
@@ -91,21 +92,103 @@ li {
 .search-section .paragraph {
   text-align: center;
   margin-bottom: 80px;
+  font-size: 12px;
+  font-family: Open Sans;
+  font-weight: 400;
+  line-height: 24px;
+  color: #011638;
 }
 .search-section .hero {
   display: flex;
   gap: 25px;
-  margin: 0 auto;
 }
 .search-section .hero img {
   width: 500px;
-  margin-left: 15em;
 }
 .search-section .hero .text {
   font-size: 20px;
   font-weight: 400;
   line-height: 35px;
-  margin-right: 15em;
   text-align: justify;
-  padding: 2px;
+  color: #011638;
+}
+.search-section .hero .text span {
+  font-weight: 700;
+}
+
+.popular-postcodes {
+  margin-top: 5em;
+  background: #fafdfa;
+}
+.popular-postcodes p {
+  text-transform: capitalize;
+}
+.popular-postcodes .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #f9c80e;
+  border-radius: 8px 8px 0px 0px;
+  padding: 16px;
+}
+.popular-postcodes .first {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.popular-postcodes .colored {
+  background: #fef4cf;
+}
+.popular-postcodes .scroll {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.map {
+  margin-top: 5em;
+}
+.map .use-check {
+  display: flex;
+  gap: 25px;
+}
+.map .use-check img {
+  width: 500px;
+}
+.map .use-check .text {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: justify;
+  color: #00040b;
+}
+
+footer {
+  background-color: #00040b;
+  color: #fff;
+  text-transform: capitalize;
+  width: 100%;
+  margin-top: 150px;
+  padding: 25px;
+}
+footer .footer-elements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .footer-elements li {
+  font-size: 16px;
+  font-weight: 400;
+}
+footer .footer-elements .main {
+  font-size: 24px;
+  font-weight: 600;
+}
+footer .footer-paragraph p {
+  text-align: center;
+}
+footer .footer-paragraph p a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+footer .footer-paragraph p span {
+  color: #f9c80e;
 }/*# sourceMappingURL=main.css.map */
