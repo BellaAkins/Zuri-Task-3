@@ -43,6 +43,10 @@ li {
   margin-top: 15px;
   margin-left: 2em;
 }
+.navbar .close,
+.navbar .menu {
+  display: none;
+}
 .navbar ul {
   display: flex;
   gap: 30px;
@@ -133,22 +137,24 @@ li {
   text-transform: capitalize;
 }
 .popular-postcodes .top {
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background: #f9c80e;
   border-radius: 8px 8px 0px 0px;
   padding: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 .popular-postcodes .first {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2.5fr 2fr 1fr;
 }
 .popular-postcodes .colored {
   background: #fef4cf;
 }
 .popular-postcodes .scroll {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
 }
 
 .map {
@@ -200,4 +206,132 @@ footer .footer-paragraph p a {
 }
 footer .footer-paragraph p span {
   color: #f9c80e;
+}
+
+@media only screen and (max-width: 680px) {
+  body .navbar {
+    display: none;
+  }
+  body .navbar ul li {
+    display: none;
+  }
+  body .navbar .menu {
+    display: block;
+  }
+  body .search-section .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+  }
+  body .search-section .search-bar input {
+    width: 360px;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+  }
+  body .search-section .search-bar input::-moz-placeholder {
+    font-size: 14px;
+  }
+  body .search-section .search-bar input::placeholder {
+    font-size: 14px;
+  }
+  body .search-section .search-bar img {
+    width: 28px;
+    position: absolute;
+    left: 5px;
+    margin-right: 4px;
+  }
+  body .search-section .search-bar button {
+    width: 70px;
+    padding: 14px;
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  body .search-section .paragraph {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 12px;
+    font-family: Open Sans;
+    font-weight: 400;
+    line-height: 24px;
+    color: #011638;
+  }
+  body .search-section .hero {
+    display: grid;
+    gap: 25px;
+  }
+  body .search-section .hero img {
+    width: 450px;
+    margin: 0 auto;
+  }
+  body .search-section .hero .text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: justify;
+    color: #011638;
+    padding: 10px;
+  }
+  body .search-section .hero .text span {
+    font-weight: 700;
+  }
+  body .popular-postcodes {
+    margin-top: 5em;
+    background: #fafdfa;
+    margin: 0 auto;
+    width: 500px;
+  }
+  body .popular-postcodes p {
+    text-transform: capitalize;
+  }
+  body .popular-postcodes .top {
+    grid-template-columns: 1fr 1fr 1fr;
+    background: #f9c80e;
+    border-radius: 8px 8px 0px 0px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .popular-postcodes .first {
+    display: grid;
+    grid-template-columns: 2.5fr 2fr 1fr;
+  }
+  body .popular-postcodes .colored {
+    background: #fef4cf;
+  }
+  body .popular-postcodes .scroll {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .map {
+    margin-top: 5em;
+  }
+  body .map .use-check {
+    display: grid;
+  }
+  body .map .use-check .text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: justify;
+    color: #00040b;
+  }
+  body .map .use-check img {
+    width: 450px;
+    margin: 0 auto;
+  }
+  footer .footer-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  footer .footer-elements li {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=main.css.map */
