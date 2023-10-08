@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Check My Postcode</title>
+    <title>CheckMyPostcode</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,47 +13,50 @@
     />
   </head>
   <body>
-    <div class="navbar">
-      <a href="#" class="logo">Check My Postcode</a>
-      <svg
-        class="close"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2V2ZM14.71 13.29C14.8037 13.383 14.8781 13.4936 14.9289 13.6154C14.9797 13.7373 15.0058 13.868 15.0058 14C15.0058 14.132 14.9797 14.2627 14.9289 14.3846C14.8781 14.5064 14.8037 14.617 14.71 14.71C14.617 14.8037 14.5064 14.8781 14.3846 14.9289C14.2627 14.9797 14.132 15.0058 14 15.0058C13.868 15.0058 13.7373 14.9797 13.6154 14.9289C13.4936 14.8781 13.383 14.8037 13.29 14.71L12 13.41L10.71 14.71C10.617 14.8037 10.5064 14.8781 10.3846 14.9289C10.2627 14.9797 10.132 15.0058 10 15.0058C9.86799 15.0058 9.73729 14.9797 9.61543 14.9289C9.49357 14.8781 9.38297 14.8037 9.29 14.71C9.19628 14.617 9.12188 14.5064 9.07111 14.3846C9.02034 14.2627 8.99421 14.132 8.99421 14C8.99421 13.868 9.02034 13.7373 9.07111 13.6154C9.12188 13.4936 9.19628 13.383 9.29 13.29L10.59 12L9.29 10.71C9.1017 10.5217 8.99591 10.2663 8.99591 10C8.99591 9.7337 9.1017 9.4783 9.29 9.29C9.47831 9.1017 9.7337 8.99591 10 8.99591C10.2663 8.99591 10.5217 9.1017 10.71 9.29L12 10.59L13.29 9.29C13.4783 9.1017 13.7337 8.99591 14 8.99591C14.2663 8.99591 14.5217 9.1017 14.71 9.29C14.8983 9.4783 15.0041 9.7337 15.0041 10C15.0041 10.2663 14.8983 10.5217 14.71 10.71L13.41 12L14.71 13.29Z"
-          fill="black"
-        />
-      </svg>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Lists</a></li>
-        <li><a href="#">Maps</a></li>
-        <li><a href="#">Nearest Postcodes</a></li>
-        <li><a href="#">Lottery</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-      <svg
-        class="menu"
-        viewBox="0 0 48 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
-          fill="white"
-        />
-      </svg>
-    </div>
     <div class="container">
+      <header>
+        <a href="#" class="logo">Check My Postcode</a>
+        <nav>
+          <svg
+            class="close"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7363 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2V2ZM14.71 13.29C14.8037 13.383 14.8781 13.4936 14.9289 13.6154C14.9797 13.7373 15.0058 13.868 15.0058 14C15.0058 14.132 14.9797 14.2627 14.9289 14.3846C14.8781 14.5064 14.8037 14.617 14.71 14.71C14.617 14.8037 14.5064 14.8781 14.3846 14.9289C14.2627 14.9797 14.132 15.0058 14 15.0058C13.868 15.0058 13.7373 14.9797 13.6154 14.9289C13.4936 14.8781 13.383 14.8037 13.29 14.71L12 13.41L10.71 14.71C10.617 14.8037 10.5064 14.8781 10.3846 14.9289C10.2627 14.9797 10.132 15.0058 10 15.0058C9.86799 15.0058 9.73729 14.9797 9.61543 14.9289C9.49357 14.8781 9.38297 14.8037 9.29 14.71C9.19628 14.617 9.12188 14.5064 9.07111 14.3846C9.02034 14.2627 8.99421 14.132 8.99421 14C8.99421 13.868 9.02034 13.7373 9.07111 13.6154C9.12188 13.4936 9.19628 13.383 9.29 13.29L10.59 12L9.29 10.71C9.1017 10.5217 8.99591 10.2663 8.99591 10C8.99591 9.7337 9.1017 9.4783 9.29 9.29C9.47831 9.1017 9.7337 8.99591 10 8.99591C10.2663 8.99591 10.5217 9.1017 10.71 9.29L12 10.59L13.29 9.29C13.4783 9.1017 13.7337 8.99591 14 8.99591C14.2663 8.99591 14.5217 9.1017 14.71 9.29C14.8983 9.4783 15.0041 9.7337 15.0041 10C15.0041 10.2663 14.8983 10.5217 14.71 10.71L13.41 12L14.71 13.29Z"
+              fill="black"
+            />
+          </svg>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Lists</a></li>
+            <li><a href="#">Maps</a></li>
+            <li><a href="#">Nearest Postcodes</a></li>
+            <li><a href="#">Lottery</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </nav>
+        <svg
+          class="menu"
+          viewBox="0 0 48 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
+            fill="black"
+          />
+        </svg>
+      </header>
+
       <section class="search-section">
         <div class="search-bar">
           <input
             type="text"
             placeholder="Search for a postcode or place name"
           />
-          <img class="search-icon" src="search.png" alt="search" />
+          <img class="search-icon" src="search.svg" alt="search" />
           <button type="search">Search</button>
         </div>
         <p class="paragraph">
@@ -85,58 +88,43 @@
           <h1>Popular Postcodes</h1>
         </div>
         <div class="top">
-          <p>Location</p>
-          <p>Postcode</p>
-          <p><img src="filter.png" alt="filter" />Filter</p>
+          <p class="location">Location</p>
+          <p class="post">Postcode</p>
+          <p class="filter"><img src="filter.png" alt="filter" />Filter</p>
         </div>
         <div class="first colored">
-          <p>Birmingham</p>
-          <p>wA1 2WS</p>
+          <p class="loc">Birmingham</p>
+          <p class="post-cont">wA1 2WS</p>
         </div>
         <div class="first">
-          <p>Manchester</p>
-          <p>QWE FG3G</p>
+          <p class="loc">Manchester</p>
+          <p class="post-cont">QWE FG3G</p>
         </div>
         <div class="first colored">
-          <p>leeds</p>
-          <p>nJ8 I89</p>
+          <p class="loc">leeds</p>
+          <p class="post-cont">nJ8 I89</p>
         </div>
         <div class="first">
-          <p>Bristol</p>
-          <p>kLM 7Y6</p>
+          <p class="loc">Bristol</p>
+          <p class="post-cont">kLM 7Y6</p>
         </div>
         <div class="first colored">
-          <p>cornwall</p>
-          <p>SDR 7UT</p>
+          <p class="loc">cornwall</p>
+          <p class="post-cont">SDR 7UT</p>
         </div>
         <div class="first">
-          <p>Bristol</p>
-          <p>kLM 7Y6</p>
+          <p class="loc">Bristol</p>
+          <p class="post-cont">kLM 7Y6</p>
         </div>
 
         <div class="scroll">
-          <img src="left arrow.png" alt="arrow" />
-          <p>Page 1 of 3</p>
-          <img src="right arrow.png" alt="arrow" />
+          <img class="left" src="left arrow.svg" alt="arrow" />
+          <p class="pages">Page 1 of 3</p>
+          <img class="right" src="right arrow.svg" alt="arrow" />
         </div>
       </section>
 
       <section class="map">
-        <!-- <div class="heroone">
-          <img src="map.png" alt="map" />
-
-          <div class="text">
-            <h1>
-              Use check my postcode to find out key information about your local
-              Postcode
-            </h1>
-            <p>
-              Find out nearest postcode to where you are right now. Read what
-              other people have said about your postcode and leave your own
-              comments for others to read.
-            </p>
-          </div>
-        </div>-->
         <div class="use-check">
           <div class="text">
             <h1>
@@ -152,41 +140,44 @@
           <img src="map.png" alt="map" />
         </div>
       </section>
-    </div>
-    <footer>
-      <div class="footer-elements">
-        <div class="first-column">
-          <ul>
-            <li class="main"><a href="#"></a>Search</li>
-            <li><a href="#"></a>postcodes by county</li>
-            <li><a href="#"></a>postcodes by introduction date</li>
-            <li><a href="#"></a>postcodes near me</li>
-            <li><a href="#"></a>postcode lottery</li>
-          </ul>
-        </div>
-        <div class="second-column">
-          <ul>
-            <li class="main"><a href="#"></a>maps</li>
-            <li><a href="#"></a>postcode map by user type</li>
-            <li><a href="#"></a>postcode map by use category</li>
-            <li><a href="#"></a>postcode map by council tax band</li>
-          </ul>
-        </div>
-        <div class="third-column">
-          <ul>
-            <li class="main"><a href="#"></a>legal</li>
-            <li><a href="#"></a>privacy policy</li>
-            <li><a href="#"></a>disclaimer and limitations</li>
-            <li><a href="#"></a>abou this website</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="footer-paragraph">
-        <p>
-          <a href="#">CheckmyPostcode.UK</a> is a <span>GoodStuff</span> website
-        </p>
-      </div>
-    </footer>
+      <footer>
+        <div class="footer-elements">
+          <div class="first-column">
+            <ul>
+              <li class="main"><a href="#"></a>Search</li>
+              <li><a href="#"></a>postcodes by county</li>
+              <li><a href="#"></a>postcodes by introduction date</li>
+              <li><a href="#"></a>postcodes near me</li>
+              <li><a href="#"></a>postcode lottery</li>
+            </ul>
+          </div>
+          <div class="second-column">
+            <ul>
+              <li class="main"><a href="#"></a>maps</li>
+              <li><a href="#"></a>postcode map by user type</li>
+              <li><a href="#"></a>postcode map by use category</li>
+              <li><a href="#"></a>postcode map by council tax band</li>
+            </ul>
+          </div>
+          <div class="third-column">
+            <ul>
+              <li class="main"><a href="#"></a>legal</li>
+              <li><a href="#"></a>privacy policy</li>
+              <li><a href="#"></a>disclaimer and limitations</li>
+              <li><a href="#"></a>abou this website</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-paragraph">
+          <p>
+            <a href="#">CheckmyPostcode.UK</a> is a
+            <span>GoodStuff</span> website
+          </p>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+    </div>
   </body>
 </html>
