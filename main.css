@@ -1,129 +1,127 @@
-* {
-  box-sizing: border-box;
-  font-family: open sans;
-}
-
 body {
-  margin: 0;
+  margin: 1.5em;
+  font-family: "Open sans", sans-serif;
   background: #eff9f0;
 }
 
 a {
   text-decoration: none;
-  color: #00040b;
-  font-family: Open Sans;
-  font-size: 24px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
 }
 
 li {
   list-style: none;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.navbar {
-  background: #f9c80e;
+header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
-  padding-right: 4em;
 }
-.navbar .logo {
-  text-decoration: none;
+header .logo {
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 100%;
+}
+header nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: #f9c80e;
+  width: 50%;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.1s ease-in-out;
+}
+header nav ul {
+  padding: 0;
+  margin-top: 8em;
+}
+header nav ul a {
   color: #00040b;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 100%;
-  margin-top: 15px;
-  margin-left: 2em;
+  padding: 0.75em 2em;
+  display: block;
 }
-.navbar .close,
-.navbar .menu {
-  display: none;
+header nav ul a:hover {
+  background: #fff;
 }
-.navbar ul {
-  display: flex;
-  gap: 30px;
+header .close {
+  float: right;
+  margin: 2em;
+  width: 2.5em;
 }
-.navbar ul li a {
-  font-family: Open Sans;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 100%;
-  padding: 10px;
+header svg {
+  width: 2.3em;
+  margin-top: -0.7em;
+  cursor: pointer;
+}
+
+.open-nav {
+  transform: translateX(0);
 }
 
 .search-section .search-bar {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+  margin-top: 3em;
 }
 .search-section .search-bar input {
-  width: 900px;
-  border-radius: 3px;
-  background: #fafdfa;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+  width: 200px;
   border: none;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Open Sans;
-  line-height: 24px;
-  padding: 12px;
-  padding: 20px 70px;
+  font-size: 1rem;
+  padding: 20px;
 }
 .search-section .search-bar input::-moz-placeholder {
-  font-size: 16px;
+  font-size: 0.7rem;
 }
 .search-section .search-bar input::placeholder {
-  font-size: 16px;
+  font-size: 0.7rem;
 }
 .search-section .search-bar img {
-  width: 48px;
+  width: 15px;
   position: absolute;
-  left: 19px;
-  margin-right: 5px;
+  left: 2px;
+  margin-right: 40px;
 }
 .search-section .search-bar button {
+  width: 70px;
+  padding: 20px;
   background-color: #011638;
   color: #fff;
-  width: 221px;
-  padding: 16px;
-  font-weight: 400;
-  font-family: Open Sans;
-  font-size: 20px;
+  border-radius: 2px;
+  font-size: 0.65rem;
+  text-align: center;
 }
 .search-section .paragraph {
   text-align: center;
   margin-bottom: 80px;
-  font-size: 12px;
+  font-size: 1rem;
   font-family: Open Sans;
   font-weight: 400;
   line-height: 24px;
   color: #011638;
 }
 .search-section .hero {
-  display: flex;
+  display: grid;
   gap: 25px;
 }
 .search-section .hero img {
-  width: 500px;
+  width: 330px;
 }
 .search-section .hero .text {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 35px;
   text-align: justify;
   color: #011638;
+  padding: 10px;
+}
+.search-section .hero .text h1 {
+  font-size: 1.4rem;
 }
 .search-section .hero .text span {
   font-weight: 700;
@@ -137,42 +135,74 @@ li {
   text-transform: capitalize;
 }
 .popular-postcodes .top {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background: #f9c80e;
   border-radius: 8px 8px 0px 0px;
-  padding: 16px;
+  padding: 30.5px 40px;
+  justify-items: center;
+}
+.popular-postcodes .top .location {
+  justify-self: start;
+}
+.popular-postcodes .post-cont {
+  justify-self: center;
+}
+.popular-postcodes .loc {
+  margin-left: 40px;
+}
+.popular-postcodes .filter {
   display: flex;
-  justify-content: space-between;
+  justify-self: end;
 }
 .popular-postcodes .first {
   display: grid;
-  grid-template-columns: 2.5fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .popular-postcodes .colored {
   background: #fef4cf;
 }
 .popular-postcodes .scroll {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 24px;
+}
+.popular-postcodes .scroll .left,
+.popular-postcodes .scroll .right {
+  background-color: rgb(250, 253, 250);
+  margin-left: 40px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  padding: 16px;
+  border-radius: 50%;
+}
+.popular-postcodes .scroll .right {
+  margin-right: 40px;
+  justify-self: end;
+}
+.popular-postcodes .scroll .pages {
+  justify-self: center;
 }
 
 .map {
-  margin-top: 5em;
+  margin-top: 2em;
 }
 .map .use-check {
-  display: flex;
-  gap: 25px;
-}
-.map .use-check img {
-  width: 500px;
+  display: grid;
 }
 .map .use-check .text {
-  font-size: 28px;
+  padding: 1.5em;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 130%;
   text-align: justify;
   color: #00040b;
+}
+.map .use-check .text h1 {
+  font-size: 1.3rem;
+}
+.map .use-check img {
+  width: 330px;
+  margin: 0 auto;
 }
 
 footer {
@@ -180,27 +210,26 @@ footer {
   color: #fff;
   text-transform: capitalize;
   width: 100%;
-  margin-top: 150px;
-  padding: 25px;
+  margin-top: 5em;
 }
 footer .footer-elements {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 footer .footer-elements li {
-  font-size: 16px;
+  font-size: 0.57rem;
   font-weight: 400;
 }
 footer .footer-elements .main {
-  font-size: 24px;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 footer .footer-paragraph p {
   text-align: center;
+  font-size: 0.7rem;
 }
 footer .footer-paragraph p a {
   color: #fff;
-  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
 }
@@ -208,49 +237,52 @@ footer .footer-paragraph p span {
   color: #f9c80e;
 }
 
-@media only screen and (max-width: 680px) {
-  body .navbar {
-    display: none;
-  }
-  body .navbar ul li {
-    display: none;
-  }
-  body .navbar .menu {
-    display: block;
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 3em;
   }
   body .search-section .search-bar {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
     width: -moz-fit-content;
     width: fit-content;
     margin: auto;
+    margin-top: 3em;
   }
   body .search-section .search-bar input {
-    width: 360px;
+    width: 300px;
+    border-radius: 3px;
+    background: #fafdfa;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
     border: none;
     font-size: 16px;
-    padding: 10px;
+    font-weight: 400;
+    font-family: Open Sans;
+    line-height: 24px;
+    padding: 12px;
+    padding: 20px 70px;
   }
   body .search-section .search-bar input::-moz-placeholder {
-    font-size: 14px;
+    font-size: 16px;
   }
   body .search-section .search-bar input::placeholder {
-    font-size: 14px;
+    font-size: 16px;
   }
   body .search-section .search-bar img {
-    width: 28px;
+    width: 48px;
     position: absolute;
-    left: 5px;
-    margin-right: 4px;
+    left: 19px;
+    margin-right: 5px;
   }
   body .search-section .search-bar button {
-    width: 70px;
-    padding: 14px;
-    border-radius: 2px;
+    background-color: #011638;
+    color: #fff;
+    width: 190px;
+    padding: 20px 70px;
     font-weight: 400;
-    font-size: 12px;
+    font-family: Open Sans;
+    font-size: 20px;
   }
   body .search-section .paragraph {
     text-align: center;
@@ -262,20 +294,185 @@ footer .footer-paragraph p span {
     color: #011638;
   }
   body .search-section .hero {
-    display: grid;
+    display: flex;
     gap: 25px;
   }
   body .search-section .hero img {
-    width: 450px;
-    margin: 0 auto;
+    width: 400px;
   }
   body .search-section .hero .text {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 35px;
     text-align: justify;
     color: #011638;
+  }
+  body .search-section .hero .text span {
+    font-weight: 700;
+  }
+  body .map {
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  body .map .use-check {
+    display: flex;
+    gap: 25px;
+  }
+  body .map .use-check img {
+    width: 300px;
+  }
+  body .map .use-check .text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: justify;
+    color: #00040b;
+  }
+  body footer {
+    background-color: #00040b;
+    color: #fff;
+    text-transform: capitalize;
+    width: 100%;
+    padding: 20px;
+  }
+  body footer .footer-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  body footer .footer-elements li {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  body footer .footer-elements .main {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  body footer .footer-paragraph p {
+    text-align: center;
+  }
+  body footer .footer-paragraph p a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  body footer .footer-paragraph p span {
+    color: #f9c80e;
+  }
+}
+@media only screen and (min-width: 920px) {
+  body {
+    margin: 0;
+  }
+  body section {
+    min-width: 500px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  body .menu,
+  body .close {
+    display: none;
+  }
+  body header {
+    background: #f9c80e;
     padding: 10px;
+  }
+  body header .logo {
+    text-decoration: none;
+    color: #00040b;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 100%;
+    margin-top: 15px;
+    margin-left: 2em;
+  }
+  body header nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  body header nav ul {
+    display: flex;
+    margin: 0;
+  }
+  body header nav ul a {
+    color: #00040b;
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+  }
+  body header nav ul a:hover {
+    background: none;
+    border-bottom: 2px solid #fff;
+  }
+  body .search-section .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    margin-top: 3em;
+  }
+  body .search-section .search-bar input {
+    width: 700px;
+    border-radius: 3px;
+    background: #fafdfa;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Open Sans;
+    line-height: 24px;
+    padding: 12px;
+    padding: 20px 70px;
+  }
+  body .search-section .search-bar input::-moz-placeholder {
+    font-size: 16px;
+  }
+  body .search-section .search-bar input::placeholder {
+    font-size: 16px;
+  }
+  body .search-section .search-bar img {
+    width: 48px;
+    position: absolute;
+    left: 19px;
+    margin-right: 5px;
+  }
+  body .search-section .search-bar button {
+    background-color: #011638;
+    color: #fff;
+    width: 221px;
+    padding: 16px;
+    font-weight: 400;
+    font-family: Open Sans;
+    font-size: 20px;
+  }
+  body .search-section .paragraph {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 12px;
+    font-family: Open Sans;
+    font-weight: 400;
+    line-height: 24px;
+    color: #011638;
+  }
+  body .search-section .hero {
+    display: flex;
+    gap: 25px;
+  }
+  body .search-section .hero img {
+    width: 500px;
+  }
+  body .search-section .hero .text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: justify;
+    color: #011638;
   }
   body .search-section .hero .text span {
     font-weight: 700;
@@ -283,55 +480,114 @@ footer .footer-paragraph p span {
   body .popular-postcodes {
     margin-top: 5em;
     background: #fafdfa;
-    margin: 0 auto;
-    width: 470px;
   }
   body .popular-postcodes p {
     text-transform: capitalize;
   }
   body .popular-postcodes .top {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background: #f9c80e;
     border-radius: 8px 8px 0px 0px;
-    padding: 16px;
+    padding: 30.5px 40px;
+    justify-items: center;
+  }
+  body .popular-postcodes .top .location {
+    justify-self: start;
+  }
+  body .popular-postcodes .post-cont {
+    justify-self: center;
+  }
+  body .popular-postcodes .loc {
+    margin-left: 40px;
+  }
+  body .popular-postcodes .filter {
     display: flex;
-    justify-content: space-between;
+    justify-self: end;
   }
   body .popular-postcodes .first {
     display: grid;
-    grid-template-columns: 2.5fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   body .popular-postcodes .colored {
     background: #fef4cf;
   }
   body .popular-postcodes .scroll {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 24px;
+  }
+  body .popular-postcodes .scroll .left,
+  body .popular-postcodes .scroll .right {
+    background-color: rgb(250, 253, 250);
+    margin-left: 40px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+    padding: 16px;
+    border-radius: 50%;
+  }
+  body .popular-postcodes .scroll .right {
+    margin-right: 40px;
+    justify-self: end;
+  }
+  body .popular-postcodes .scroll .pages {
+    justify-self: center;
   }
   body .map {
     margin-top: 5em;
   }
   body .map .use-check {
-    display: grid;
+    display: flex;
+    gap: 25px;
+  }
+  body .map .use-check img {
+    width: 500px;
   }
   body .map .use-check .text {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 400;
     line-height: 130%;
     text-align: justify;
     color: #00040b;
   }
-  body .map .use-check img {
-    width: 450px;
-    margin: 0 auto;
+  body .map .use-check .text h1 {
+    font-size: 2.3rem;
   }
-  footer .footer-elements {
+  body footer {
+    background-color: #00040b;
+    color: #fff;
+    text-transform: capitalize;
+    width: 100%;
+    margin-top: 150px;
+    padding: 25px;
+  }
+  body footer .footer-elements {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  footer .footer-elements li {
-    font-size: 12px;
+  body footer .footer-elements li {
+    font-size: 16px;
     font-weight: 400;
+  }
+  body footer .footer-elements .main {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  body footer .footer-paragraph p {
+    text-align: center;
+  }
+  body footer .footer-paragraph p a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  body footer .footer-paragraph p span {
+    color: #f9c80e;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contaner {
+    width: 1200px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=main.css.map */
