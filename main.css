@@ -298,10 +298,11 @@ footer .footer-paragraph p span {
     gap: 25px;
   }
   body .search-section .hero img {
-    width: 400px;
+    width: 30vh;
+    height: 40vh;
   }
   body .search-section .hero .text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
     line-height: 35px;
     text-align: justify;
